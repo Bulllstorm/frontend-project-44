@@ -1,5 +1,5 @@
 import {userAnswer} from "./userAnswer.js";
-import {userName} from "./askName.js";
+
 
 let userCount = 0
 
@@ -8,7 +8,7 @@ function compareAnswers(rightAnswer){
         console.log('Correct!')
         return userCount++;
     }
-    if (userAnswer !== rightAnswer){} {
+    if (userAnswer !== rightAnswer) {
         userCount = false;
         return userCount;
     }
