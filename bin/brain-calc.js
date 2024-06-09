@@ -22,7 +22,7 @@ function goBrainCalc(){
     getResultOfExpression();
     inputUserAnswer();
     compareAnswers(rightAnswer);
-    getCount(start)
+    getCount(start, rightAnswer)
 }
 function askQuestion(){
     console.log(`Question`, getFirstNumber(), getOperator(), getSecNumber());
