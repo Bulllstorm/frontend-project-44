@@ -33,7 +33,7 @@ function compareNumbers(){
         rightAnswer = 'no';
     }
     compareAnswers(rightAnswer);
-    getCount(start)
+    getCount(start, rightAnswer);
 }
 function askQuestion(){
     questNum = getNumber();
