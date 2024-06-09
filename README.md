@@ -4,5 +4,8 @@
 Maintainability
 <a href="https://codeclimate.com/github/Bulllstorm/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/e7fdbbfd52117a5267d7/maintainability" /></a>
 
-asciinema brain-even
+asciinema:
+brain-even
 https://asciinema.org/a/3fiVd81fJZLtGYhjdSO5A5IR9
+brain-calc
+https://asciinema.org/a/fUHnCZGZhIm7jX6j8qhPWnhrl
