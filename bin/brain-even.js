@@ -1,13 +1,22 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
+import {askName} from "../src/askName.js";
+import {inputUserAnswer} from "../src/userAnswer.js";
+import {getCount} from "../src/getCount.js";
+import {compareAnswers} from "../src/compareAnswers.js";
+
+
+let start = startBrainEven;
 let questNum = 0;
-let userScore = 0;
-let rightAnswer = '';
-let userName = '';
-console.log('Welcome to the Brain Games');
+let rightAnswer;
+
+
+
 askName()
 console.log('Answer "yes" if the number is even, otherwise answer "no"')
 startBrainEven();
+
+
+
 
 
 function startBrainEven(){
@@ -17,23 +26,14 @@ function startBrainEven(){
 
 
 function compareNumbers(){
-    const userAnswer = readlineSync.question('Your answer: ')
+     inputUserAnswer()
     if (questNum % 2 === 0) {
         rightAnswer = 'yes';
     } else if (questNum % 2 !== 0){
         rightAnswer = 'no';
     }
-    if(userAnswer === rightAnswer){
-        userScore += 1;
-        console.log('Correct answer!');
-        if(userScore === 3){
-            console.log(`Congratulations, ${userName} `)
-            return;
-        }
-        startBrainEven();
-    } else if (userAnswer !== rightAnswer){
-        console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
-    }
+    compareAnswers(rightAnswer);
+    getCount(start)
 }
 function askQuestion(){
     questNum = getNumber();
@@ -43,8 +43,4 @@ function askQuestion(){
 
 function getNumber() {
     return Math.floor(Math.random() * 100);
-}
-function askName (){
-    userName = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${userName}!`);
 }
