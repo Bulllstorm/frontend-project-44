@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import {askName} from "../src/askName.js";
-import {inputUserAnswer} from "../src/userAnswer.js";
-import {getCount} from "../src/getCount.js";
-import {compareAnswers} from "../src/compareAnswers.js";
+import {askName} from "../../src/askName.js";
+import {inputUserAnswer} from "../../src/userAnswer.js";
+import {getCount} from "../../src/getCount.js";
+import {compareAnswers} from "../../src/compareAnswers.js";
 
 
 let start = startBrainEven;
