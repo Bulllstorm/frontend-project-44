@@ -7,7 +7,7 @@ function getCount(func, rightAnswer){
         console.log(`Congratulations, ${userName}!`)
     } else if (userCount === false){
         console.log(`${userAnswer} is wrong answer. Correct answer was ${rightAnswer}`);
-        console.log(`Lets try again, ${userName}!`)
+        console.log(`Let's try again, ${userName}!`)
     }else if(userCount < 3) {
         func();
     }
