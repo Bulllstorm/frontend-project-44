@@ -4,7 +4,7 @@
   "description": "[![Actions Status](https://github.com/Bulllstorm/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Bulllstorm/frontend-project-44/actions)",
   "type": "module",
   "bin": {
-    "brain-games": "bin/games/brain-games.js",
+    "brain-games": "bin/brain-games.js",
     "brain-even": "bin/games/brain-even.js",
     "brain-calc": "bin/games/brain-calc.js",
     "brain-gcd": "bin/games/brain-gcd.js",

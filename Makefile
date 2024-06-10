@@ -1,7 +1,7 @@
 install: 
 	npm ci
 brain-games:
-	node bin/games/brain-games.js
+	node bin/brain-games.js
 brain-even:
 	node bin/games/brain-even.js
 brain-calc:
