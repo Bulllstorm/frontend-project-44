@@ -1,68 +1,63 @@
 #!/usr/bin/env node
-import {askName} from "../../src/askName.js";
-import {inputUserAnswer} from "../../src/userAnswer.js";
-import {compareAnswers} from "../../src/compareAnswers.js";
-import {getCount} from "../../src/getCount.js";
+import { askName } from '../../src/askName.js';
+import { inputUserAnswer } from '../../src/userAnswer.js';
+import { compareAnswers } from '../../src/compareAnswers.js';
+import { getCount } from '../../src/getCount.js';
 
 let rightAnswer;
 let firstNum = 0;
 let operator = '';
 let secNum = 0;
 let operatorIdx;
-let operators = ['+', '-', '*']
-let start = goBrainCalc;
+const operators = ['+', '-', '*'];
+const start = goBrainCalc;
 askName();
-console.log('What is the result of the expression?')
+console.log('What is the result of the expression?');
 goBrainCalc();
 
-
-//.................................
+// .................................
 function goBrainCalc() {
-    getFirstNumber();
-    getOperator();
-    getSecNumber();
-    askQuestion();
-    getResultOfExpression();
-    inputUserAnswer();
-    compareAnswers(rightAnswer);
-    getCount(start, rightAnswer);
+  getFirstNumber();
+  getOperator();
+  getSecNumber();
+  askQuestion();
+  getResultOfExpression();
+  inputUserAnswer();
+  compareAnswers(rightAnswer);
+  getCount(start, rightAnswer);
 }
 
 function askQuestion() {
-    console.log(`Question: ${firstNum} ${operator} ${secNum}`);
+  console.log(`Question: ${firstNum} ${operator} ${secNum}`);
 }
 
 function getOperator() {
-    operatorIdx = Math.floor(Math.random() * 3);
-    operator = operators[operatorIdx];
-    return operator;
+  operatorIdx = Math.floor(Math.random() * 3);
+  operator = operators[operatorIdx];
+  return operator;
 }
 
 function getFirstNumber() {
-    firstNum = Math.floor((Math.random() * 100));
-    return firstNum;
+  firstNum = Math.floor((Math.random() * 100));
+  return firstNum;
 }
 
 function getSecNumber() {
-    secNum = Math.floor((Math.random() * 100));
-    return secNum;
+  secNum = Math.floor((Math.random() * 100));
+  return secNum;
 }
 
 function getResultOfExpression() {
-    switch (operatorIdx) {
-        case 0:
-            rightAnswer = firstNum + secNum;
-            break;
-        case 1:
-            rightAnswer = firstNum - secNum;
-            break;
-        case 2:
-            rightAnswer = firstNum * secNum;
-            break;
-    }
-    return rightAnswer;
+  switch (operatorIdx) {
+    case 0:
+      rightAnswer = firstNum + secNum;
+      break;
+    case 1:
+      rightAnswer = firstNum - secNum;
+      break;
+    case 2:
+      rightAnswer = firstNum * secNum;
+      break;
+  }
+  return rightAnswer;
 }
-
-
-
-
