@@ -25,7 +25,7 @@ function goBrainGcd(){
 
 
 function askQuestion(){
-    console.log(`Question ${firstNumber} ${secondNumber}` );
+    console.log(`Question: ${firstNumber} ${secondNumber}`);
 }
 function getFirstNumber(){
     firstNumber = Math.floor((Math.random() * 100));

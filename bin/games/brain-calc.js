@@ -28,7 +28,7 @@ function goBrainCalc(){
     getCount(start, rightAnswer);
 }
 function askQuestion(){
-    console.log(`Question: ${firstNum} ${operator} ${secNum}` );
+    console.log(`Question: ${firstNum} ${operator} ${secNum}`);
 }
 function getOperator(){
     operatorIdx = Math.floor(Math.random() * 3);
