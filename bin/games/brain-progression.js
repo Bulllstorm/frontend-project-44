@@ -37,7 +37,7 @@ function goBrainProgression  ()  {
 }
 
 function askQuestion(){
-    console.log(`Question: `, arrString);
+    console.log(`Question: ${arrString}`);
 }
 
 function getArrToString(){
@@ -69,6 +69,6 @@ function getStartNumber(){
     return startNumber;
 }
 function getProgressionLength(){
-    lengthOfProgression = Math.floor(Math.random() * (10 - 5) + 5);
+    lengthOfProgression = Math.floor(Math.random() * (10 - 6) + 6);
     return lengthOfProgression;
 }
