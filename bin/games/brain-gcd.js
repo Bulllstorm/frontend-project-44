@@ -12,7 +12,7 @@ askName();
 goBrainGcd();
 
 
-function goBrainGcd(){
+function goBrainGcd() {
     getFirstNumber();
     getSecNumber();
     console.log('Find the greatest common divisor of given numbers.');
@@ -24,19 +24,22 @@ function goBrainGcd(){
 }
 
 
-function askQuestion(){
+function askQuestion() {
     console.log(`Question: ${firstNumber} ${secondNumber}`);
 }
-function getFirstNumber(){
+
+function getFirstNumber() {
     firstNumber = Math.floor((Math.random() * 100));
     return firstNumber;
 }
-function getSecNumber(){
+
+function getSecNumber() {
     secondNumber = Math.floor((Math.random() * 100));
     return secondNumber;
 }
-function getGcd(firstNum, secondNum){
-    if (secondNum === 0){
+
+function getGcd(firstNum, secondNum) {
+    if (secondNum === 0) {
         return firstNum;
     } else {
         return getGcd(secondNum, firstNum % secondNum);

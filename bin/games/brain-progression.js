@@ -20,8 +20,9 @@ let start = goBrainProgression;
 askName();
 console.log('What number is missing in the progression?');
 goBrainProgression();
+
 //.......
-function goBrainProgression  ()  {
+function goBrainProgression() {
     progArr = [];
     getStartNumber();
     getStepOfProgression();
@@ -36,39 +37,44 @@ function goBrainProgression  ()  {
     getCount(start, rightAnswer);
 }
 
-function askQuestion(){
+function askQuestion() {
     console.log(`Question: ${arrString}`);
 }
 
-function getArrToString(){
+function getArrToString() {
     arrString = progArr.join(' ');
     return arrString;
 }
 
-function changeNum (){
+function changeNum() {
     changeUn = '..';
     progArr[randomIdx] = changeUn;
 }
-function getRightAnswer(){
+
+function getRightAnswer() {
     randomIdx = Math.floor(Math.random() * progArr.length);
     rightAnswer = progArr[randomIdx];
     return rightAnswer;
 }
-function getProgression(){
-    for(let j = 0, i = startNumber; j < lengthOfProgression; j++, i = i +stepOfProgression){
+
+function getProgression() {
+    for (let j = 0, i = startNumber; j < lengthOfProgression; j++, i = i + stepOfProgression) {
         progArr.push(i);
     }
     return progArr;
 }
-function getStepOfProgression(){
-    stepOfProgression = Math.floor(Math.random()*10);
+
+function getStepOfProgression() {
+    stepOfProgression = Math.floor(Math.random() * 10);
     return stepOfProgression;
 }
-function getStartNumber(){
-    startNumber = Math.floor(Math.random()*10);
+
+function getStartNumber() {
+    startNumber = Math.floor(Math.random() * 10);
     return startNumber;
 }
-function getProgressionLength(){
+
+function getProgressionLength() {
     lengthOfProgression = Math.floor(Math.random() * (10 - 6) + 6);
     return lengthOfProgression;
 }

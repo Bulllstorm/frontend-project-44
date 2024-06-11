@@ -21,9 +21,10 @@ function goBrainPrime() {
     compareAnswers(rightAnswer);
     getCount(start, rightAnswer);
 }
-function isPrimeNumber(num){
-    for (let i = 2; i < num; i++){
-        if (num % i === 0){
+
+function isPrimeNumber(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
             rightAnswer = "no";
             return rightAnswer;
         }
@@ -31,10 +32,12 @@ function isPrimeNumber(num){
     rightAnswer = "yes";
     return rightAnswer;
 }
-function askQuestion(){
+
+function askQuestion() {
     console.log(`Question: ${number}`);
 }
-function getNumber(){
-    number =  Math.floor(Math.random()*(3571 - 2) + 2);
+
+function getNumber() {
+    number = Math.floor(Math.random() * (3571 - 2) + 2);
     return number;
 }
