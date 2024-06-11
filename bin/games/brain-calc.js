@@ -21,14 +21,14 @@ function goBrainCalc(){
     getFirstNumber();
     getOperator();
     getSecNumber();
-    askQuestion();
+    askQuestion(firstNum, operator, secNum);
     getResultOfExpression();
     inputUserAnswer();
     compareAnswers(rightAnswer);
     getCount(start, rightAnswer)
 }
-function askQuestion(){
-    console.log(`Question ${firstNum} ${operator} ${secNum}` );
+function askQuestion(number1, operation, number2){
+    console.log('Question: ', number1, operation, number2 );
 }
 function getOperator(){
     operatorIdx = Math.floor(Math.random() * 3);
