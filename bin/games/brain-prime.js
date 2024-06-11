@@ -13,6 +13,7 @@ askName();
 goBrainPrime();
 
 function goBrainPrime() {
+    getNumber();
     console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
     askQuestion();
     inputUserAnswer();
@@ -31,7 +32,7 @@ function isPrimeNumber(num){
     return rightAnswer;
 }
 function askQuestion(){
-    console.log(`Question`, getNumber());
+    console.log(`Question`, number);
 }
 function getNumber(){
     number =  Math.floor(Math.random()*(3571 - 2) + 2);
