@@ -32,7 +32,7 @@ function isPrimeNumber(num){
     return rightAnswer;
 }
 function askQuestion(){
-    console.log(`Question ${number}`);
+    console.log(`Question: ${number}`);
 }
 function getNumber(){
     number =  Math.floor(Math.random()*(3571 - 2) + 2);
