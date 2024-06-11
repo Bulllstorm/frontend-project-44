@@ -13,6 +13,8 @@ goBrainGcd();
 
 
 function goBrainGcd(){
+    getFirstNumber();
+    getSecNumber();
     console.log('Find the greatest common divisor of given numbers.');
     askQuestion();
     rightAnswer = getGcd(firstNumber, secondNumber);
@@ -23,7 +25,7 @@ function goBrainGcd(){
 
 
 function askQuestion(){
-    console.log(`Question`, getFirstNumber(),getSecNumber());
+    console.log(`Question ${firstNumber} ${secondNumber}` );
 }
 function getFirstNumber(){
     firstNumber = Math.floor((Math.random() * 100));
