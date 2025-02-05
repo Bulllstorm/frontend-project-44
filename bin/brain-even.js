@@ -34,7 +34,7 @@ const playGame = () => {
       return;
     }
   }
-  console.log('Congratulations! You won!');
+  console.log(`Congratulations, ${userName}!`);
 };
 
 playGame();
