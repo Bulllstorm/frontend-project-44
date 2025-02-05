@@ -6,7 +6,7 @@ console.log('Welcome to Brain Games!');
 
 // Запрашиваем имя
 const askName = () => {
-  const userName = readLineSync.question('What is your name?');
+  const userName = readLineSync.question('What is your name? ');
   console.log(chalk.blue(`Hello, ${userName}`));
   return userName;
 };
@@ -22,6 +22,7 @@ const playGame = () => {
   const rounds = 3;
   for (let i = 0; i < rounds; i + 1) {
     const number = getRandomNumber();
+    console.log('Answer "yes" if the number is even, otherwise answer "no"');
     console.log(`Question: ${number}`);
     const correctAnswer = isEven(number);
     const userAnswer = getUserAnswer();
