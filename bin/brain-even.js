@@ -20,7 +20,7 @@ const userName = askName();
 // Логика игры
 const playGame = () => {
   const rounds = 3;
-  for (let i = 0; i < rounds; i + 1) {
+  for (let i = 0; i < rounds; i += 1) {
     const number = getRandomNumber();
     console.log('Answer "yes" if the number is even, otherwise answer "no"');
     console.log(`Question: ${number}`);
