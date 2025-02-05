@@ -30,7 +30,7 @@ const playGame = () => {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Lets try again ${userName}!`);
+      console.log(`Lets try again, ${userName}!`);
       return;
     }
   }
